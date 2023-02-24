@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Registrar{% endblock title %}
+
+{% block content %}
+
+<main>
+    
+    <div class="card col-md-4 offset-md-4 mt-5">
+        <div class="card-header">
+            <h1 class="display-5 text-center">Login</h1>
+        </div>
+        <div class="card-body ">
+            {{error}}
+            <form action="" method="post">
+                {% csrf_token %}
+
+                
+
+                <label for="id_username">Usuario</label>
+                <input type="text" name="username" id="id_username" class="form-control" placeholder="Usuario" required autofocus>
+
+                <label for="id_password1">Contraseña</label>
+                <input type="password" name="password1" id="id_password1" class="form-control" placeholder="Contraseña" required>
+
+                <label for="id_password2">Confirmar Contraseña</label>
+                <input type="password" name="password2" id="id_password2" class="form-control" placeholder="Confirmar Contraseña" required>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-6 offset-md-4">
+                    <input type="submit" value="Registrar" class="btn btn-primary col-auto me-auto" style="margin-left: 15px;">
+                    </div>
+            </div>
+            </form>
+    
+        </div>
+      </div>
+
+
+</main>
+
+{% endblock content %}
